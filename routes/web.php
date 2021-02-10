@@ -21,4 +21,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::resource('restaurantes', \App\Http\Controllers\RestauranteController::class);
+Route::resource('pratos', \App\Http\Controllers\PratoController::class);
+
 require __DIR__.'/auth.php';
