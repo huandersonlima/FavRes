@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Restaurante;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class RestauranteSeeder extends Seeder
@@ -15,12 +16,11 @@ class RestauranteSeeder extends Seeder
     public function run()
     {
         //
-
-        Restaurante::create([
-        	'nome' => 'Dona xepa',
-        	'imagem' => 'asdsada',
-        	'endereco' => 'rua 2, 223',
-        	'user_id' => 1
+    	$users = User::all();
+    	foreach ($users as $user) {
+        Restaurante::factory(5)->create([
+        	'user_id' => $user->id
         ]);
+    	}
     }
 }

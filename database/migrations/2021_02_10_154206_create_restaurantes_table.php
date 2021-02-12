@@ -18,6 +18,7 @@ class CreateRestaurantesTable extends Migration
             $table->string('nome');
             $table->string('endereco');
             $table->string('imagem');
+            $table->integer('user_id');
             $table->timestamps();
         });
     }
