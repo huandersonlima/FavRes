@@ -22,7 +22,10 @@ class PratoFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'nome' => $this->faker->name,
+            'ingredientes' => $this->faker->paragraph,
+            'imagem' => $this->faker->word,
+
         ];
     }
 }
