@@ -26,6 +26,7 @@ class RestauranteFactory extends Factory
             'nome' =>$this->faker->word ,
             'imagem' => $this->faker->word,
             'endereco' => $this->faker->streetAddress,
+            
         ];
     }
 }
