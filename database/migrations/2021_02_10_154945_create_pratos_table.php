@@ -16,8 +16,9 @@ class CreatePratosTable extends Migration
         Schema::create('pratos', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
-            $table->string('ingredientes');
+            $table->text('ingredientes');
             $table->string('imagem');
+            $table->integer('restaurante_id');
             $table->timestamps();
         });
     }
