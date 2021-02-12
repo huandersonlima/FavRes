@@ -27,5 +27,6 @@ class PratoFactory extends Factory
             'imagem' => $this->faker->word,
 
         ];
+        
     }
 }
