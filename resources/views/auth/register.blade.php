@@ -14,21 +14,33 @@
 
             <!-- Name -->
             <div>
-                <x-label for="name" :value="__('Name')" />
+                <x-label for="name" :value="__('Nome')" />
 
                 <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
             </div>
 
             <!-- Email Address -->
             <div class="mt-4">
-                <x-label for="email" :value="__('Email')" />
+                <x-label for="email" :value="__('E-mail')" />
 
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
 
+            <!-- Sexo -->
+            <div class="mt-4">
+                <x-label for="sexo" :value="__('Sexo')" />
+                <x-input id="sexo" class="block mt-1 w-full" type="text" name="sexo" :value="old('sexo')" required />
+            </div>
+
+             <!-- Data de nascimento-->
+            <div class="mt-4">
+                <x-label for="datanasc" :value="__('Data de nascimento')" />
+                <x-input id="datanasc" class="block mt-1 w-full" type="date" name="data_nasc" :value="old('datanasc')" required />
+            </div>
+
             <!-- Password -->
             <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
+                <x-label for="password" :value="__('Senha')" />
 
                 <x-input id="password" class="block mt-1 w-full"
                                 type="password"
@@ -38,7 +50,7 @@
 
             <!-- Confirm Password -->
             <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirm Password')" />
+                <x-label for="password_confirmation" :value="__('Confirme a senha')" />
 
                 <x-input id="password_confirmation" class="block mt-1 w-full"
                                 type="password"
