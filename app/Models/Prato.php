@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Prato extends Model
 {
     use HasFactory;
+
+    public function restaurante(){
+
+        return $this->belongsTo(Restaurante::class);
+
+    }
 }
