@@ -13,12 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 use App\Http\Controllers\HomeController;
-
+use App\Http\Controllers\RestauranteController;
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('/dashboard',[HomeController::class, 'dashboard'])->middleware(['auth'])->name('dashboard');
+
+Route::post('/restaurantes/novo', [RestauranteController::class, 'store'])->name('add-Res');
 
 Route::resource('restaurantes', \App\Http\Controllers\RestauranteController::class);
 Route::resource('pratos', \App\Http\Controllers\PratoController::class);

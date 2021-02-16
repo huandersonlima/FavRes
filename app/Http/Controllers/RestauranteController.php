@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Restaurante;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 class RestauranteController extends Controller
 {
     /**
@@ -36,6 +36,14 @@ class RestauranteController extends Controller
     public function store(Request $request)
     {
         //
+        Restaurante::create([
+            'nome' => $request->nome,
+            'endereco' => $request->endereco,
+            'imagem' => $request->imagem,
+            'user_id'=> Auth::user()->id,
+        ]);
+
+        return redirect('dashboard');
     }
 
     /**
